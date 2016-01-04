@@ -22,7 +22,7 @@ def word_count(sentence)
     if word_counts[word].nil?
       word_counts[word] = 1
     else
-      word_counts[word] += 1
+      word_counts += 1
     end
   end
   word_counts
