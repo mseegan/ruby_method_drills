@@ -315,23 +315,8 @@ end
   # counts how many times a word appears in a string
   # ignores case
   # ignores characters that are not in the sequence a-z
-def word_count(sentence)
-  word_counts = {}
-  sentence.split(" ").each do |word|
-    word = word.downcase.gsub(/[^a-z]/i, "")
-    if word_counts[word].nil?
-      word_counts[word] = 0
-    else
-      word_counts += 1
-    end
-  end
-  word_counts
-end
 
 #most_frequent_word
   # finds the word in a string that appears with the most frequency
-def most_frequent_word(sentence)
-  word_counts = word_count(sentence)
-  word_counts.empty? ? nil : word_counts.invert.max[1]
-end
+
 
